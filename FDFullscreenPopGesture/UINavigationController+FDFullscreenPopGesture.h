@@ -39,6 +39,8 @@
 /// Default to YES, disable it if you don't want so.
 @property (nonatomic, assign) BOOL fd_viewControllerBasedNavigationBarAppearanceEnabled;
 
+- (UIViewController *)fd_previousViewControllerWithIndex:(NSUInteger)index;
+
 @end
 
 /// Allows any view controller to disable interactive pop gesture, which might
@@ -54,9 +56,5 @@
 /// checked when view controller based navigation bar's appearance is enabled.
 /// Default to NO, bars are more likely to show.
 @property (nonatomic, assign) BOOL fd_prefersNavigationBarHidden;
-
-/// Max allowed initial distance to left edge when you begin the interactive pop
-/// gesture. 0 by default, which means it will ignore this limit.
-@property (nonatomic, assign) CGFloat fd_interactivePopMaxAllowedInitialDistanceToLeftEdge;
 
 @end
